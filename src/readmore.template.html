@@ -3,7 +3,7 @@
 	<span ng-show="vm.showMoreText" class="more-show-hide" ng-bind-html="vm.moreText" style="white-space:pre-wrap;"></span>
 </span>
 
-<span name="toggle" ng-show="vm.toggle.show">
+<span name="toggle" ng-show="vm.toggle.show" ng-click="$event.stopPropagation()">
 	<span ng-class="vm.toggle.dotsClass" ng-show="!vm.toggle.state">{{ vm.toggle.dots }}</span>
-	<a ng-class="vm.toggle.linkClass" ng-click="vm.doToggle()">{{ vm.toggle.text }}</a>
+	<a ng-class="vm.toggle.linkClass" ng-click="vm.doToggle()" >{{ vm.toggle.text }}</a>
 </span>
